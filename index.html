@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/pokemon-logo-simbolo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo-pkd">
+            <img src="img/pokedexA.png" alt="Logo Pokedex">
+        </a>
+        <div class="nav-menu">
+            <a href="#nav-menu-pkd">Buscar</a>
+        </div>
+    </header>
+
+    <div class="hero-poke">
+        <div class="wrap-hero-poke">
+            <h2>¡Bienvenido a Pokedex!</h2>
+            <p>Busca tu pokemon favorito. Por nombre, tipo, debilidad, habilidad y mucho mas!!!</p>
+            <a href="#nav-menu-pkd" id="btn-buscarPkd">Ver Todos</a>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <nav id="nav-menu-pkd">
+            <img src="/img/pokedexA.png" alt="Logo Pokedex">
+            <ul class="nav-list">
+                <li class="nav-item"><button class="btn btn-menu verTodos" id="verTodos">Ver Todos</button></li>
+                <li class="nav-item"><button class="btn btn-menu normal " id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn btn-menu fire" id="fire">Fire</button></li>
+                <li class="nav-item"><button class="btn btn-menu water" id="water">Water</button></li>
+                <li class="nav-item"><button class="btn btn-menu grass" id="grass">Grass</button></li>
+                <li class="nav-item"><button class="btn btn-menu electric" id="electric">Electric</button></li>
+                <li class="nav-item"><button class="btn btn-menu ice" id="ice">Ice</button></li>
+                <li class="nav-item"><button class="btn btn-menu fighting" id="fighting">Fighting</button></li>
+                <li class="nav-item"><button class="btn btn-menu poison" id="poison">Poison</button></li>
+                <li class="nav-item"><button class="btn btn-menu ground" id="ground">Ground</button></li>
+                <li class="nav-item"><button class="btn btn-menu flying" id="flying">Flying</button></li>
+                <li class="nav-item"><button class="btn btn-menu psychic" id="psychic">Psychic</button></li>
+                <li class="nav-item"><button class="btn btn-menu bug" id="bug">Bug</button></li>
+                <li class="nav-item"><button class="btn btn-menu rock" id="rock">Rock</button></li>
+                <li class="nav-item"><button class="btn btn-menu gosh" id="gosh">Gosh</button></li>
+                <li class="nav-item"><button class="btn btn-menu dark" id="dark">Dark</button></li>
+                <li class="nav-item"><button class="btn btn-menu dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="btn btn-menu steel" id="steel">Steel</button></li>
+                <li class="nav-item"><button class="btn btn-menu fairy" id="fairy">Fairy</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="todos-pkd">
+            <div class="pokemon-todos" id="listaPokedex">
+                <!--<div class="pokemon">
+                    <div class="pokemon-img">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="wrap-nombre">
+                            <p class="pokemon-id">#025</p>
+                            <h2 class="pokemon-nombre">Pikachu</h2>
+                        </div>
+                        <div class="pokemon-tipos">
+                            <p class="tipo electric">Electric</p>
+                            <p class="tipo fighting">Fighting</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">4m</p>
+                            <p class="stat">60kg</p>
+                        </div>
+                    </div>
+                </div> -->
+                
+            </div>
+        </div>
+    </main>
+
+    <section class="lista-Pokedex" id="lista-pkd">
+        <div class="wrap-lista-pkd">
+            <h2>Busca tu pokedex en la siguiente tabla</h2>
+            <legend>Tabla de Pokedex</legend>
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Debilidad</th>
+                    <th>Fortalezas</th>
+                    <th>Peso</th>
+                    <th>Ubicacion</th>
+                </thead>
+
+                <tbody>
+                    <td>#01</td>
+                    <td>Pikachu</td>
+                    <td>Agua</td>
+                    <td>Electricidad</td>
+                    <td>Bosque</td>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="js/pokedex.js"></script>
+</body>
+</html>
