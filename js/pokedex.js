@@ -1,8 +1,11 @@
+let URL = "https://pokeapi.co/api/v2/pokemon/";
 const listaPokemon = document.querySelector('#listaPokedex');
 const botonesMenu = document.querySelectorAll('.btn-menu');
-let URL = "https://pokeapi.co/api/v2/pokemon/";
+const pokdName = document.querySelector('#input-pkd');
+const btnSearch = document.querySelector('#btn-searchPkd');
 
-for (let i = 1; i <= 200; i++) {
+//Foreach para buscar pokemones con la URL
+for (let i = 1; i <= 400; i++) {
     fetch(URL + i)
         .then((response) => response.json())
         .then(data => mostrarPokemon(data))
@@ -10,9 +13,7 @@ for (let i = 1; i <= 200; i++) {
 
 function mostrarPokemon(pokd) {
 
-    let tipos =pokd.types.map((type) => `<p class="${type.type.name} tipo">${type.type.name}</p>`);
-    tipos = tipos.join('');
-
+    //Funcion para agregarle un 0 al ID
     let pokdId = pokd.id.toString();
     if (pokdId.length === 1){
         pokdId = "0" + pokdId;
@@ -20,6 +21,11 @@ function mostrarPokemon(pokd) {
         pokdId;
     }
 
+    //Funcion para mostrar Tipos de pokedex
+    let tipos =pokd.types.map((type) => `<p class="${type.type.name} tipo">${type.type.name}</p>`);
+    tipos = tipos.join('');
+
+    //Agregar el card o Div
     const div = document.createElement("div");
     div.classList.add("pokemon");
     div.innerHTML = `
@@ -44,6 +50,7 @@ function mostrarPokemon(pokd) {
         listaPokemon.append(div)
 }
 
+//Funcion para filtro de los Botones
 botonesMenu.forEach(boton => boton.addEventListener("click", (event) => {
     const botonId = event.currentTarget.id;
 
@@ -66,3 +73,26 @@ botonesMenu.forEach(boton => boton.addEventListener("click", (event) => {
             })
     }
 }))
+
+//Funcion para Buscar por numero o nombre
+btnSearch.addEventListener('click', insertarPokemon)
+btnSearch.addEventListener('touchstart', insertarPokemon) //Para Movil
+
+function insertarPokemon(){
+    window.fetch(`${URL}${pokdName.value.toLowerCase()}`)
+    .then(response => {
+        if(response.status === 404){
+            alert('Pokemon no disponible. Intentalo de nuevo!')
+        } else{
+            return response.json()
+        }
+    })
+
+    .then(responseJSON => {
+
+        for(let pokemonInfo in responseJSON){
+        result.push([pokemonInfo , responseJSON[pokemonInfo]])
+        }
+    console.table(result);
+    })
+}

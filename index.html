@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/pokemon-logo-simbolo.png">
     <link rel="stylesheet" href="css/style.css">
+    <!--Link Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>Pokedex</title>
 </head>
 <body>
@@ -13,7 +15,7 @@
             <img src="img/pokedexA.png" alt="Logo Pokedex">
         </a>
         <div class="nav-menu">
-            <a href="#nav-menu-pkd">Buscar</a>
+            <a href="#search-pkd">Buscar</a>
         </div>
     </header>
 
@@ -43,7 +45,6 @@
                 <li class="nav-item"><button class="btn btn-menu psychic" id="psychic">Psychic</button></li>
                 <li class="nav-item"><button class="btn btn-menu bug" id="bug">Bug</button></li>
                 <li class="nav-item"><button class="btn btn-menu rock" id="rock">Rock</button></li>
-                <li class="nav-item"><button class="btn btn-menu gosh" id="gosh">Gosh</button></li>
                 <li class="nav-item"><button class="btn btn-menu dark" id="dark">Dark</button></li>
                 <li class="nav-item"><button class="btn btn-menu dragon" id="dragon">Dragon</button></li>
                 <li class="nav-item"><button class="btn btn-menu steel" id="steel">Steel</button></li>
@@ -53,56 +54,36 @@
     </div>
 
     <main>
+        <form class="form-search" id="search-pkd">
+            <input type="search" id="input-pkd" placeholder="Escribe un Num. o Nombre">
+            <a id="btn-searchPkd"><i class="fa fa-search"></i></a>
+        </form>
+
         <div class="todos-pkd">
             <div class="pokemon-todos" id="listaPokedex">
-                <!--<div class="pokemon">
-                    <div class="pokemon-img">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+            <!--<div class="pokemon">
+                <div class="pokemon-img">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+                </div>
+                <div class="pokemon-info">
+                    <div class="wrap-nombre">
+                        <p class="pokemon-id">#025</p>
+                        <h2 class="pokemon-nombre">Pikachu</h2>
                     </div>
-                    <div class="pokemon-info">
-                        <div class="wrap-nombre">
-                            <p class="pokemon-id">#025</p>
-                            <h2 class="pokemon-nombre">Pikachu</h2>
-                        </div>
-                        <div class="pokemon-tipos">
-                            <p class="tipo electric">Electric</p>
-                            <p class="tipo fighting">Fighting</p>
-                        </div>
-                        <div class="pokemon-stats">
-                            <p class="stat">4m</p>
-                            <p class="stat">60kg</p>
-                        </div>
+                    <div class="pokemon-tipos">
+                        <p class="tipo electric">Electric</p>
+                        <p class="tipo fighting">Fighting</p>
                     </div>
-                </div> -->
+                    <div class="pokemon-stats">
+                        <p class="stat">4m</p>
+                        <p class="stat">60kg</p>
+                    </div>
+                </div>
+            </div> -->
                 
             </div>
         </div>
     </main>
-
-    <section class="lista-Pokedex" id="lista-pkd">
-        <div class="wrap-lista-pkd">
-            <h2>Busca tu pokedex en la siguiente tabla</h2>
-            <legend>Tabla de Pokedex</legend>
-            <table>
-                <thead>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Debilidad</th>
-                    <th>Fortalezas</th>
-                    <th>Peso</th>
-                    <th>Ubicacion</th>
-                </thead>
-
-                <tbody>
-                    <td>#01</td>
-                    <td>Pikachu</td>
-                    <td>Agua</td>
-                    <td>Electricidad</td>
-                    <td>Bosque</td>
-                </tbody>
-            </table>
-        </div>
-    </section>
 
     <script src="js/pokedex.js"></script>
 </body>

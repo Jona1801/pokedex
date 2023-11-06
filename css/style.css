@@ -282,6 +282,43 @@ main{
     margin: 0 auto;
 }
 
+/*Estilos para Input Search*/
+.form-search{
+    display: flex;
+    padding-block: 1.5rem;
+    width: 310px;
+    gap: 0.5rem;
+    
+}
+
+.form-search #input-pkd{
+    width: 250px;
+    background-color: #f1f1f1; 
+    line-height: 28px;
+    outline: 0;
+    border: 2px solid #f1f1f1;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 4px 16px;
+}
+
+.form-search a{
+    padding: 4px 16px;
+    background: #f1f1f1;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.form-search a:hover{
+    transform: scale(1.1);
+}
+
+/*Estilos para Card e informacion*/
 .pokemon-todos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -394,7 +431,12 @@ main{
         display: flex;
     }
     .logo-pkd img {
-        max-width: 104px;
+        max-width: 110px;
+    }
+
+    .hero-poke{
+        height: 98vh;
+        background-attachment: local;
     }
 
     .wrap-hero-poke p{
@@ -415,11 +457,11 @@ main{
     }
 
     .btn-menu{
-        padding: 6px 17px;
+        font-size: 15px;
+        padding: 6px 18px;
     }
 
 }
-
 
 
 /*Estilos para la lista y tabla*/
